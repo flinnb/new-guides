@@ -1,7 +1,7 @@
-# Vela Development Best Practices
+# Development Best Practices
 
-This guide is a set of "best practices" for development
-here at Vela.  It will mostly concentrate on how our Go code is developed, and
+This guide is a set of "best practices" for development.
+It will mostly concentrate on how our Go code is developed, and
 will expand over time to include other platforms.
 
 ## Source Control
