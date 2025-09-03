@@ -1,9 +1,9 @@
-# Vela Go Style Guide
+# Go Style Guide
 
 ## Introduction
 
 This document presents a set of team-approved conventions for writing Go
-code at Vela. The goal of setting standards for code formatting and organization
+code. The goal of setting standards for code formatting and organization
 is maintainable code. When code is readable, consistent, predictable, and understandable
 it is by nature more maintainable. By producing more maintainable code, we thus produce
 code that is more easily changed, more readily refactored, and less prone to common errors
@@ -71,12 +71,9 @@ func foo() {
 ```
 
 * `go fmt` is your friend.  Run it against all of your Go code before commiting.
-  The majority of the popular editor for Go include plugins for this.  Use them.
-	* [SublimeText](http://www.sublimetext.com/): [GoSublime](https://github.com/DisposaBoy/GoSublime)
-	* vim: [vim-go](https://github.com/fatih/vim-go)
-	* [Atom](https://atom.io/): [go-plus](https://github.com/joefitzgerald/go-plus)
-	* See [here](https://github.com/golang/go/wiki/IDEsAndTextEditorPlugins) for
-	  more details.  Your favorite editor probably has a plugin...
+  The majority of the popular editors for Go include plugins for this.  Use them.
+  See [here](https://go.dev/wiki/IDEsAndTextEditorPlugins) for more details.
+  Your favorite editor probably has a plugin...
 
 * Keep the imports grouped by type and in the following order. Separate each group
   with an empty line:
@@ -96,11 +93,11 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"vela/api"
-	"bitbucket.org/vela-team/vela-gocore/configuration"
-	"vela/models"
-	"vela/utilities"
-	"bitbucket.org/vela-team/vela-gocore/validation"
+	"github.com/team/project/api"
+	"github.com/team/gocore/configuration"
+	"github.com/team/project/models"
+	"github.com/team/project/utilities"
+	"github.com/team/gocore/validation"
 )
 
 // ALSO BAD
@@ -114,11 +111,11 @@ import (
 	"net/http"
 	"os"
 
-	"vela/api"
-	"bitbucket.org/vela-team/vela-gocore/configuration"
-	"vela/models"
-	"vela/utilities"
-	"bitbucket.org/vela-team/vela-gocore/validation"
+	"github.com/team/project/api"
+	"github.com/team/gocore/configuration"
+	"github.com/team/project/models"
+	"github.com/team/project/utilities"
+	"github.com/team/gocore/validation"
 )
 
 // STILL BAD
@@ -129,16 +126,16 @@ import(
 	"net/http"
 	"os"
 
-	"vela/api"
-	"vela/models"
-	"vela/utilities"
+	"github.com/team/project/api"
+	"github.com/team/project/models"
+	"github.com/team/project/utilities"
 
 	"github.com/Sirupsen/logrus"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 
-	"bitbucket.org/vela-team/vela-gocore/configuration"
-	"bitbucket.org/vela-team/vela-gocore/validation"
+	"github.com/team/gocore/configuration"
+	"github.com/team/gocore/validation"
 )
 
 // GOOD
@@ -152,13 +149,13 @@ import(
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 
-	"bitbucket.org/vela-team/vela-gocore/configuration"
-	"bitbucket.org/vela-team/vela-gocore/validation"
+	"github.com/team/gocore/configuration"
+	"github.com/team/gocore/validation"
 
-	"vela/api"
-	"vela/configuration"
-	"vela/models"
-	"vela/utilities"
+	"github.com/team/project/api"
+	"github.com/team/project/configuration"
+	"github.com/team/project/models"
+	"github.com/team/project/utilities"
 )
 ```
 
